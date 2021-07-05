@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="This is the description">
+    <title>GAME LOG | INDEX</title>
+    <link rel="stylesheet" type="text/css" href="Styles/styles.css" media="screen"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navElem-container">
+                <span><button role="button" class="navElem sortBtn">SORT</button></span>
+                <span><strong><a href="index.html" class="navElem homeBtn">GAME LOG</a></strong></span>
+                <span>
+                    <a href="settings.html" target="_self" class="navElem settingsBtn">
+                        <img src="Images/settings_gear.jpg" width=20>
+                    </a>
+                </span> 
+            </div>
+        </nav>
+        <hr>
+    </header>
+    <section>
+        <div class="gameInfo-container">
+            <div>
+            <span>
+                <img src="Images/gameZ.jpg" width=50 class="gameInfo boxArt">
+                <input type="text" value="" placeholder="Game Name" class="gameInfo">
+                <input type="text" value="" placeholder="System" class="gameInfo">
+                <input type="number" value="" placeholder="Curr Hrs" class="gameInfo">
+                <input type="number" value="" placeholder="Hrs Left" class="gameInfo">
+                <input type="number" value="" placeholder="Hrs Total" class="gameInfo">
+                <button role="button" class="gameInfo remove">Remove?</button>
+            </span>
+            </div>
+            <hr>
+            <span>
+                <img src="Images/game.jpg" width=50>
+                <input type="text" value="Zelda" title="Game Name" class="gameInfo">
+                <input type="text" value="Nintendo Switch" title="System" class="gameInfo">
+                <input type="number" value="5" title="Curr Hrs" class="gameInfo">
+                <input type="number" value="25" title="Hrs Left" class="gameInfo">
+                <input type="number" value="30" title="Hrs Total" class="gameInfo">
+                <button role="button" class="gameInfo">Remove?</button>
+            </span>
+            <hr>
+            <div>
+                <button role="button">Add Game</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <hr>
+        <div class="footerElem-container">
+            <span>
+                <a href="Games/games_all.html" target="_self" class="footerElem allGames">
+                    <button role="link">My Games (All)</button>
+                </a>
+                &lt;&gt;
+                <a href="Games/games_in_progress.html" target="_self" class="footerElem inProg">
+                    <button role="link">In-Progress</button>
+                </a>
+                &lt;&gt;
+                <a href="Games/games_planned.html" target="_self" class="footerElem planned">
+                    <button role="link">Planned</button>
+                </a>
+                &lt;&gt;
+                <a href="Games/games_completed.html" target="_self" class="footerElem completed">
+                    <button role="link">Completed</button>
+                </a>
+                &lt;&gt;
+                <a href="Games/games_search.html" target="_self" class="footerElem search">
+                    <button role="link">Search</button>
+                </a>
+            </span>
+        </div>
+        <div>
+            <button class="logout">Log Out</button>
+        </div>
+    </footer>
+</body>
+</html>

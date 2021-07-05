@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+}
+
+nav, footer{
+    background-color:slategray;
+    border: 10px solid black;
+    padding: 10px;
+    position: sticky;
+}
+
+/* --- */
+/* Begin Header Nav Elements */
+.navElem-container{
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.navElem{
+    /* navElem is the class which affects ALL nav elements */
+
+}
+
+.sortBtn{
+
+    /* position: absolute; */
+    /* left: 25px; */
+}
+
+.homeBtn{
+    /* position: relative; */
+    /* left: 300px; */
+}
+
+.settingsBtn{
+    /* position: relative; */
+    
+}
+/* end Nav */
+/* --- */
+/* begin Footer Nav Elements */
+.footerElem-container{
+    height: 35px;
+    display: flex;
+    justify-content:space-evenly;
+}
+.footerElem{
+    /* footerElem is the class which affects ALL nav elements */
+}
+
+.logout{
+    /* margin: 10px; */
+    /* padding: 10px; */
+    /* width: 350px; */
+}
+
+/* end footer nav elements */
+/* --- */
+/* gameInfo elements */
+.gameInfo-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items:center;
+}
+
+.gameInfo{
+    margin: 0;
+}
+
+.boxArt{
+    flex-grow: 1;
+}
+
+.remove{
+    align-self:flex-end;
+}
+
