@@ -4,6 +4,7 @@
 
 html, body{
     margin: 0;
+    padding: 0;
 }
 
 nav, footer{
@@ -65,9 +66,9 @@ nav, footer{
 /* gameInfo elements */
 .gameInfo-container{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    justify-items:center;
+    align-items: left;
+    flex-direction: column;
 }
 
 .gameInfo{
@@ -82,3 +83,6 @@ nav, footer{
     align-self:flex-end;
 }
 
+input[type='number']{
+    width: 80px;
+}
