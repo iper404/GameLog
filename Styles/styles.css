@@ -7,52 +7,62 @@ html, body{
     padding: 0;
 }
 
-nav, footer{
+.navElem-container, .footerElem-container{
+    display: flex;
+    justify-content: space-between;
     background-color:slategray;
     border: 10px solid black;
     padding: 10px;
     position: sticky;
+    height: auto;
+    align-items: center;
+    text-align: center;
 }
 
 /* --- */
 /* Begin Header Nav Elements */
 .navElem-container{
-    height: 35px;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    margin: 0;
 }
 
 .navElem{
-    /* navElem is the class which affects ALL nav elements */
 
 }
 
-.sortBtn{
-
-    /* position: absolute; */
-    /* left: 25px; */
+.navElem.sortBtn{
+    margin-left: 1.5rem;
 }
 
-.homeBtn{
-    /* position: relative; */
-    /* left: 300px; */
+.navElem.homeBtn{
+    font-size: 2em;
+    margin: .5rem;
+    text-decoration: none;
+    color:orange;
+    font-family:sans-serif;
 }
 
-.settingsBtn{
-    /* position: relative; */
-    
+.navElem.settingsBtn{
+    margin-right: 1.5rem;
 }
-/* end Nav */
-/* --- */
+/* end Header Nav */
+
+/* ---------------------------------------------- */
+
 /* begin Footer Nav Elements */
 .footerElem-container{
-    height: 35px;
-    display: flex;
-    justify-content:space-evenly;
+    margin: 0;
 }
+
 .footerElem{
-    /* footerElem is the class which affects ALL nav elements */
+
+}
+
+.footerElem.allGames{
+    margin-left: 0.75rem;
+}
+
+.footerElem.search{
+    margin-right: 0.75rem;
 }
 
 .logout{
@@ -62,21 +72,36 @@ nav, footer{
 }
 
 /* end footer nav elements */
-/* --- */
-/* gameInfo elements */
+
+/* --------------------------------------------- */
+
+/* begin gameInfo elements */
+
 .gameInfo-container{
     display: flex;
     justify-content: space-between;
     align-items: left;
     flex-direction: column;
+    margin: 25px;
 }
 
-.gameInfo{
-    margin: 0;
+.gameInfo.container-one{
+    /* margin: 25px; */
 }
 
-.boxArt{
-    flex-grow: 1;
+.gameInfo.container-two{
+    /* margin: 25px; */
+}
+
+.gameInfo.content{
+    margin-inline: 10px;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.gameInfo.boxArt{
+    /* flex-grow: 1; */
+    width: 150px;
 }
 
 .remove{
@@ -85,4 +110,10 @@ nav, footer{
 
 input[type='number']{
     width: 80px;
+}
+
+hr{
+    border:solid 1px slategrey;
+    width: 100%;
+    height: 1px;
 }
