@@ -14,9 +14,10 @@ html, body{
     border: 10px solid black;
     padding: 10px;
     position: sticky;
-    height: auto;
     align-items: center;
     text-align: center;
+    width: 100vw;
+    height: 5rem;
 }
 
 /* --- */
@@ -83,6 +84,7 @@ html, body{
     align-items: left;
     flex-direction: column;
     margin: 25px;
+    width: 100vw;
 }
 
 .gameInfo.container-one{
