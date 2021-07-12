@@ -5,6 +5,7 @@
 html, body{
     margin: 0;
     padding: 0;
+    --nav-load-time: 300ms;
 }
 
 .navElem-container, .footerElem-container{
@@ -18,6 +19,7 @@ html, body{
     text-align: center;
     width: 100vw;
     height: 5rem;
+    animation: nav-load var(--nav-load-time) ease-in;
 }
 
 .btn {
@@ -118,6 +120,11 @@ html, body{
     flex-direction: column;
     margin: 25px;
     width: 100vw;
+
+    animation: load-games var(--nav-load-time) ease-in 200ms;
+    animation-fill-mode: forwards;
+    transform: translateY(-20px);
+    opacity: 0;
 }
 
 .gameInfo.container-one{
@@ -151,4 +158,30 @@ hr{
     border:solid 1px slategrey;
     width: 100%;
     height: 1px;
+}
+
+/* animations */
+@keyframes nav-load{
+    0% {
+        /* what the animation does at the beginning */
+        transform: translateY(-100%);
+    }
+
+    100%{
+        /* what the animation does when its complete */
+        transform: translateY(0%);
+    }
+}
+
+@keyframes load-games{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100%{
+
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
