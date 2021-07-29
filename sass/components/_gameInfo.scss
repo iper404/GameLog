@@ -1,0 +1,59 @@
+.gameInfo-container{
+    background-color: $color-grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-direction: column;
+    margin: 25px;
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100vw;
+
+    /* word-wrap: none; */
+    /* white-space: nowrap; */
+
+    animation: load-games var(--nav-load-time) ease-in 200ms;
+    animation-fill-mode: forwards;
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+.gameInfo{
+    &.container-one{
+        /* margin: 25px; */
+    }
+    
+    &.container-two{
+        /* margin: 25px; */
+    }
+
+    &.content{
+        margin-inline: 10px;
+        margin-top: 2px;
+        margin-bottom: 5px;
+    }
+    
+    &.boxArt{
+        /* flex-grow: 1; */
+        margin-left: 1rem;
+        width: 150px;
+        background-color: #AAA;
+
+        transition: all .2s;
+
+        &:hover{
+            transform: scale(2);
+            box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+        }
+    }
+
+    &.addGameBtn{
+        margin-left: 1rem;
+    }
+
+    &.removeBtn{
+        align-self:flex-end;
+    }
+
+}
+

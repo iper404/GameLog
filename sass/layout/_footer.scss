@@ -1,0 +1,20 @@
+.footer{
+    position:absolute;
+    bottom: 0;
+}
+
+.footerElem-container{
+    margin: 0;
+}
+
+.footerElem{
+    &.allGames{
+        margin-left: 0.75rem;
+    }
+    
+    &.search{
+        margin-right: 0.75rem;
+    }
+}
+
+

@@ -1,0 +1,23 @@
+{
+  "name": "gamelog",
+  "version": "1.0.0",
+  "description": "GameLog is a personal project which tracks video games that the user is currently playing.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iper404/GameLog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iper404/GameLog/issues"
+  },
+  "homepage": "https://github.com/iper404/GameLog#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
