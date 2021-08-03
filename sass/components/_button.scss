@@ -39,4 +39,33 @@
         right: calc(var(--border-size) * -2);
         bottom: calc(var(--border-size) * -2);
     }
+
+    &.addGameBtn{
+        margin: 1rem;
+        margin-left: 2rem;
+    }
+
+    &.removeBtn{
+        align-self:flex-end;
+        margin-left: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &.addGameBtn,
+    &.removeBtn{
+        border: 1px solid $color-black;
+        transition: all .1.5s;
+        &:hover{
+            background-color: $color-primary;
+            color: $color-white;
+            box-shadow: 0 1rem 2rem rgba($color-black, .15);
+            transform: translateY(-2px);
+        }
+    
+        &:active{
+            box-shadow: 0 .5rem 1rem rgba($color-black, .15);
+            transform: translateY(0);
+        }
+    }
+    
   }

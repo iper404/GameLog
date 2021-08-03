@@ -64,6 +64,24 @@ hr {
     left: calc(var(--border-size) * -2);
     right: calc(var(--border-size) * -2);
     bottom: calc(var(--border-size) * -2); }
+  .btn.addGameBtn {
+    margin: 1rem;
+    margin-left: 2rem; }
+  .btn.removeBtn {
+    align-self: flex-end;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem; }
+  .btn.addGameBtn, .btn.removeBtn {
+    border: 1px solid #000;
+    transition: all 0.1 0.5s; }
+    .btn.addGameBtn:hover, .btn.removeBtn:hover {
+      background-color: mediumblue;
+      color: #fff;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+      transform: translateY(-2px); }
+    .btn.addGameBtn:active, .btn.removeBtn:active {
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      transform: translateY(0); }
 
 .gameInfo-container {
   background-color: #eee;
@@ -71,7 +89,6 @@ hr {
   justify-content: space-between;
   align-items: left;
   flex-direction: column;
-  margin: 25px;
   margin-top: 0px;
   margin-left: 0px;
   width: 100vw;
@@ -89,25 +106,25 @@ hr {
   /* margin: 25px; */ }
 
 .gameInfo.content {
-  margin-inline: 10px;
-  margin-top: 2px;
-  margin-bottom: 5px; }
+  margin-bottom: 1.5rem; }
+  .gameInfo.content.blockOne {
+    margin-top: 2rem; }
+    .gameInfo.content.blockOne:not(:last-child) {
+      margin-right: 1rem; }
+  .gameInfo.content.blockTwo:not(:last-child) {
+    margin-right: 1rem; }
 
 .gameInfo.boxArt {
   /* flex-grow: 1; */
   margin-left: 1rem;
+  margin-right: 1rem;
   width: 150px;
   background-color: #AAA;
+  float: left;
   transition: all .2s; }
   .gameInfo.boxArt:hover {
     transform: scale(2);
     box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
-
-.gameInfo.addGameBtn {
-  margin-left: 1rem; }
-
-.gameInfo.removeBtn {
-  align-self: flex-end; }
 
 .footer {
   position: absolute;
