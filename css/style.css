@@ -73,6 +73,8 @@ hr {
     margin-bottom: 1.5rem; }
   .btn.addGameBtn, .btn.removeBtn {
     border: 1px solid #000;
+    border-radius: 900px;
+    background-color: #e7e7e7;
     transition: all 0.1 0.5s; }
     .btn.addGameBtn:hover, .btn.removeBtn:hover {
       background-color: mediumblue;
@@ -92,18 +94,27 @@ hr {
   margin-top: 0px;
   margin-left: 0px;
   width: 100vw;
-  /* word-wrap: none; */
-  /* white-space: nowrap; */
   animation: load-games var(--nav-load-time) ease-in 200ms;
   animation-fill-mode: forwards;
   transform: translateY(-20px);
   opacity: 0; }
 
-.gameInfo.container-one {
-  /* margin: 25px; */ }
+.addGameContainer {
+  background-color: #eee;
+  animation: load-games var(--nav-load-time) ease-in 200ms;
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0; }
 
-.gameInfo.container-two {
-  /* margin: 25px; */ }
+.gameInfo.container {
+  padding-top: 1rem;
+  border: 1px solid black; }
+  .gameInfo.container:last-child {
+    padding-bottom: 1rem; }
+  .gameInfo.container.draggable {
+    cursor: move; }
+    .gameInfo.container.draggable.dragging {
+      opacity: 0.5; }
 
 .gameInfo.content {
   margin-bottom: 1.5rem; }
@@ -122,9 +133,11 @@ hr {
   background-color: #AAA;
   float: left;
   transition: all .2s; }
-  .gameInfo.boxArt:hover {
+  .gameInfo.boxArt:hover, .gameInfo.boxArt:focus {
     transform: scale(2);
-    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1; }
 
 .footer {
   position: absolute;

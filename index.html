@@ -8,6 +8,7 @@
     <title>GAME LOG | INDEX</title>
     <!-- <link rel="stylesheet" type="text/css" href="Styles/styles.css" media="screen"/> -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/drag-drop.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -23,8 +24,7 @@
     </header>
     <section>
         <div class="gameInfo-container">
-            <hr>
-            <div class="gameInfo container-one">
+            <div class="gameInfo container draggable" draggable="true">
                 <img src="Images/blank.jpg" class="gameInfo boxArt">
                 <input type="text" value="" placeholder="Game Name" class="gameInfo content blockOne" size=15 maxsize=50>
                 <input type="text" value="" placeholder="System" class="gameInfo content blockOne" size=15 maxsize=25>
@@ -38,8 +38,7 @@
                 <br>
                 <button role="button" class="btn removeBtn">Remove?</button>
             </div>
-            <hr>
-            <div class="gameInfo container-two">
+            <div class="gameInfo container draggable" draggable="true">
                 <img src="Images/zelda.png" class="gameInfo boxArt">
                 <input type="text" value="Zelda" title="Game Name" class="gameInfo content blockOne" size=15 maxsize=50>
                 <input type="text" value="Nintendo Switch" title="System" class="gameInfo content blockOne" size=15 maxsize=25>
@@ -53,11 +52,9 @@
                 <br>
                 <button role="button" class="btn removeBtn">Remove?</button>
             </div>
-            <hr>
-            <div>
-                <button role="button" class="btn addGameBtn">Add Game</button>
-            </div>
-            <hr>
+        </div>
+        <div class="addGameContainer">
+            <button role="button" class="btn addGameBtn">Add Game</button>
         </div>
     </section>
     <footer class="footer">
