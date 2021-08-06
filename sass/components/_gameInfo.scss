@@ -8,9 +8,14 @@
     margin-left: 0px;
     width: 100vw;
 
-    /* word-wrap: none; */
-    /* white-space: nowrap; */
+    animation: load-games var(--nav-load-time) ease-in 200ms;
+    animation-fill-mode: forwards;
+    transform: translateY(-20px);
+    opacity: 0;
+}
 
+.addGameContainer{
+    background-color: $color-grey;
     animation: load-games var(--nav-load-time) ease-in 200ms;
     animation-fill-mode: forwards;
     transform: translateY(-20px);
@@ -18,12 +23,21 @@
 }
 
 .gameInfo{
-    &.container-one{
-        /* margin: 25px; */
-    }
-    
-    &.container-two{
-        /* margin: 25px; */
+    &.container{
+        padding-top: 1rem;
+        border: 1px solid black;
+
+        &:last-child{
+            padding-bottom: 1rem;
+        }
+
+        &.draggable{
+            cursor: move;
+
+            &.dragging{
+                opacity: 0.5;
+            }
+        }
     }
 
     &.content{
@@ -57,9 +71,12 @@
         transition: all .2s;
 
 
-        &:hover{
+        &:hover,
+        &:focus{
             transform: scale(2);
             box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+            position: relative;
+            z-index: 1;
         }
     }
 

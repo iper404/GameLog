@@ -54,6 +54,9 @@
     &.addGameBtn,
     &.removeBtn{
         border: 1px solid $color-black;
+        border-radius: 900px;
+        background-color: #e7e7e7;
+
         transition: all .1.5s;
         &:hover{
             background-color: $color-primary;
