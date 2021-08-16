@@ -8,7 +8,8 @@
     <title>GAME LOG | INDEX</title>
     <!-- <link rel="stylesheet" type="text/css" href="Styles/styles.css" media="screen"/> -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/drag-drop.js" defer></script>
+    <script defer src="scripts/script.js"></script>
+    <script defer src="scripts/drag-drop.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -23,8 +24,8 @@
         </nav>
     </header>
     <section>
-        <div class="gameInfo-container">
-            <div class="gameInfo container draggable" draggable="true">
+        <div class="gameInfo-container" data-game-container>
+            <div class="gameInfo container draggable" draggable="true" data-game-blank>
                 <img src="Images/blank.jpg" class="gameInfo boxArt">
                 <input type="text" value="" placeholder="Game Name" class="gameInfo content blockOne" size=15 maxsize=50>
                 <input type="text" value="" placeholder="System" class="gameInfo content blockOne" size=15 maxsize=25>
@@ -36,7 +37,8 @@
                 <span class="gameInfo text">Total Hrs:</span>
                 <input type="number" value="" placeholder="Hrs Total" class="gameInfo content blockTwo" maxlength="4" size="4">
                 <br>
-                <button role="button" class="btn removeBtn">Remove?</button>
+                <button role="button" class="btn updateBtn">Update</button>
+                <button role="button" class="btn removeBtn" data-remove>Remove?</button>
             </div>
             <div class="gameInfo container draggable" draggable="true">
                 <img src="Images/zelda.png" class="gameInfo boxArt">
@@ -50,11 +52,12 @@
                 <span class="gameInfo text">Total Hrs:</span>
                 <input type="number" value="30" title="Hrs Total" class="gameInfo content blockTwo" maxlength="4" size="4">
                 <br>
+                <button role="button" class="btn updateBtn">Update</button>
                 <button role="button" class="btn removeBtn">Remove?</button>
             </div>
         </div>
         <div class="addGameContainer">
-            <button role="button" class="btn addGameBtn">Add Game</button>
+            <button role="button" class="btn addGameBtn" data-add>Add Game</button>
         </div>
     </section>
     <footer class="footer">
@@ -82,5 +85,24 @@
             <button class="btn logout">Log Out</button>
         </div>
     </footer>
+
+    <template id="game-template">
+        <div class="gameInfo container draggable" draggable="true">
+            <img src="Images/blank.jpg" class="gameInfo boxArt">
+            <input type="text" value="" placeholder="Game Name" class="gameInfo content blockOne" size=15 maxsize=50>
+            <input type="text" value="" placeholder="System" class="gameInfo content blockOne" size=15 maxsize=25>
+            <br>
+            <span class="gameInfo text">Progress (Hrs):</span>
+            <input type="number" value="" placeholder="Curr Hrs" class="gameInfo content blockTwo" maxlength="4" size="4">
+            <span class="gameInfo text">Time Left (Hrs)</span>
+            <input type="number" value="" placeholder="Hrs Left" class="gameInfo content blockTwo" maxlength="4" size="4">
+            <span class="gameInfo text">Total Hrs:</span>
+            <input type="number" value="" placeholder="Hrs Total" class="gameInfo content blockTwo" maxlength="4" size="4">
+            <br>
+            <button role="button" class="btn updateBtn">Update</button>
+            <button role="button" class="btn removeBtn">Remove?</button>
+        </div>
+    </template>
+
 </body>
 </html>
